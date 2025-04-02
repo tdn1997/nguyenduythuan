@@ -1,19 +1,20 @@
 import Head from "next/head";
 
 import styles from "../styles/Home.module.css";
-import Router from 'next/router';
 
 import type { NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 
 interface IProps {
   query: ParsedUrlQuery
+  asPath?: string | undefined
 }
 
 const Home: NextPage<IProps> = (props: IProps) => {
   const promotion = "https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy82OTAzMDM1NDUwNDEwOTk1NzEyL3Byb21vdGlvbl9zaGFyaW5nL2NhYTQ5YTgxLTlhNjMtNDI2Yy1iOWMzLWQxODU1NzUwMTA2NC01YWFmOTI2ZC1lN2RjLTQyZWItODE5OS00YTRjYzQ2OWZlM2MucG5nIiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6NjI3LCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjowLCJnIjowLCJiIjowLCJhbHBoYSI6MH19fX0"
   const taylor = "https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy8yODgwODM4ODM5OTQwMDY3MzI4L2xpbmtzLzEwMjI3OTQxODAyMzgyOTg3MjY0LzA0YzQ4ZjUyLWM0OTEtNDY0ZS04NTVjLTViMjc3MzI4ODUwZi1hYjY3NjE2ZDAwMDBiMjczZTc4N2NmZmVjMjBhYTJhMzk2YTYxNjQ3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19"
-  const image = !!props.query.promoName ? promotion : taylor;
+  const ogImage = !!props.query.promoName ? promotion : taylor;
+  const ogUrl = `https://www.nguyenduythuan.dev${props.asPath}`
 
   return (
     <div
@@ -37,22 +38,17 @@ const Home: NextPage<IProps> = (props: IProps) => {
         />
         <meta name="og:site_name" content="NguyenDuyThuan" />
         <meta name="og:url" content="https://www.nguyenduythuan.dev" />
-        {
-          props.query.promoName &&
-          <>
-            <meta name="og:image" content={image} />
-            <meta name="og:image:width" content="720" />
-            <meta name="og:image:height" content="480" />
-            <meta name="og:rich_attachment" content="true" />
+        <meta name="og:image" content={ogImage} />
+        <meta name="og:image:width" content="720" />
+        <meta name="og:image:height" content="480" />
+        <meta name="og:rich_attachment" content="true" />
 
-            <meta property="og:image" content={image} />
-            <meta property="og:image:width" content="720" />
-            <meta property="og:image:height" content="480" />
-            <meta property="og:rich_attachment" content="true" />
-          </>
-        }
-        <meta name="og:url" content="https://www.nguyenduythuan.dev/?promoName=Thuan_Test_1_4_uon&channel=linkedin" />
-        <meta property="og:url" content="https://www.nguyenduythuan.dev/?promoName=Thuan_Test_1_4_uon&channel=linkedin" />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="720" />
+        <meta property="og:image:height" content="480" />
+        <meta property="og:rich_attachment" content="true" />
+        <meta name="og:url" content={ogUrl} />
+        <meta property="og:url" content={ogUrl} />
         <link rel="icon" href="/coin.png" />
         <link rel="apple-touch-icon" href="/coin.png" />
       </Head>
@@ -76,12 +72,13 @@ const Home: NextPage<IProps> = (props: IProps) => {
 };
 
 Home.displayName = "Home";
-Home.getInitialProps = async (ctx): Promise<IProps> => {
+Home.getInitialProps = async (context): Promise<IProps> => {
+  console.log('context.query ======== :>> ', context.query);
 
-  console.log('ctx.query ==================== :>> ', ctx.query.promoName);
   return {
-    query: ctx.query
-  };
+    query: context.query,
+    asPath: context.asPath,
+  }
 };
 
 export default Home;
