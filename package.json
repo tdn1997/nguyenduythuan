@@ -2,6 +2,9 @@
   "name": "nguyenduythuan",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "yarn": "use npm!"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
