@@ -35,18 +35,22 @@ const Home: NextPage<IProps> = (props: IProps) => {
         />
         <meta name="og:site_name" content="NguyenDuyThuan" />
         <meta name="og:url" content="https://www.nguyenduythuan.dev" />
-        {/* {
+        {
           props.query.promoName &&
-        } */}
-        <meta name="og:image" content="https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy8yODgwODM4ODM5OTQwMDY3MzI4L2xpbmtzLzEwMjI3OTQxODAyMzgyOTg3MjY0LzA0YzQ4ZjUyLWM0OTEtNDY0ZS04NTVjLTViMjc3MzI4ODUwZi1hYjY3NjE2ZDAwMDBiMjczZTc4N2NmZmVjMjBhYTJhMzk2YTYxNjQ3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19" />
-        <meta name="og:image:width" content="720" />
-        <meta name="og:image:height" content="480" />
-        <meta name="og:rich_attachment" content="true" />
-        <meta property="og:image" content="https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy8yODgwODM4ODM5OTQwMDY3MzI4L2xpbmtzLzEwMjI3OTQxODAyMzgyOTg3MjY0LzA0YzQ4ZjUyLWM0OTEtNDY0ZS04NTVjLTViMjc3MzI4ODUwZi1hYjY3NjE2ZDAwMDBiMjczZTc4N2NmZmVjMjBhYTJhMzk2YTYxNjQ3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19" />
-        <meta property="og:image:width" content="720" />
-        <meta property="og:image:height" content="480" />
-        <meta property="og:rich_attachment" content="true" />
+          <>
+            <meta name="og:image" content="https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy8yODgwODM4ODM5OTQwMDY3MzI4L2xpbmtzLzEwMjI3OTQxODAyMzgyOTg3MjY0LzA0YzQ4ZjUyLWM0OTEtNDY0ZS04NTVjLTViMjc3MzI4ODUwZi1hYjY3NjE2ZDAwMDBiMjczZTc4N2NmZmVjMjBhYTJhMzk2YTYxNjQ3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19" />
+            <meta name="og:image:width" content="720" />
+            <meta name="og:image:height" content="480" />
+            <meta name="og:rich_attachment" content="true" />
+
+            <meta property="og:image" content="https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy8yODgwODM4ODM5OTQwMDY3MzI4L2xpbmtzLzEwMjI3OTQxODAyMzgyOTg3MjY0LzA0YzQ4ZjUyLWM0OTEtNDY0ZS04NTVjLTViMjc3MzI4ODUwZi1hYjY3NjE2ZDAwMDBiMjczZTc4N2NmZmVjMjBhYTJhMzk2YTYxNjQ3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19" />
+            <meta property="og:image:width" content="720" />
+            <meta property="og:image:height" content="480" />
+            <meta property="og:rich_attachment" content="true" />
+          </>
+        }
         <meta name="og:url" content="https://www.nguyenduythuan.dev/?promoName=Thuan_Test_1_4_uon&channel=linkedin" />
+        <meta property="og:url" content="https://www.nguyenduythuan.dev/?promoName=Thuan_Test_1_4_uon&channel=linkedin" />
         <link rel="icon" href="/coin.png" />
         <link rel="apple-touch-icon" href="/coin.png" />
       </Head>
