@@ -38,7 +38,7 @@ const Home: NextPage<IProps> = (props: IProps) => {
         {/* {
           props.query.promoName &&
         } */}
-        <meta name="og:image" content="https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy82OTAzMDM1NDUwNDEwOTk1NzEyL3Byb21vdGlvbl9zaGFyaW5nL2NhYTQ5YTgxLTlhNjMtNDI2Yy1iOWMzLWQxODU1NzUwMTA2NC01YWFmOTI2ZC1lN2RjLTQyZWItODE5OS00YTRjYzQ2OWZlM2MucG5nIiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6NjI3LCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjowLCJnIjowLCJiIjowLCJhbHBoYSI6MH19fX0=" />
+        <meta name="og:image" content="https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy8yODgwODM4ODM5OTQwMDY3MzI4L2xpbmtzLzEwMjI3OTQxODAyMzgyOTg3MjY0LzA0YzQ4ZjUyLWM0OTEtNDY0ZS04NTVjLTViMjc3MzI4ODUwZi1hYjY3NjE2ZDAwMDBiMjczZTc4N2NmZmVjMjBhYTJhMzk2YTYxNjQ3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19" />
         <meta name="og:url" content="https://www.nguyenduythuan.dev/?promoName=Thuan_Test_1_4_uon&channel=linkedin" />
         <link rel="icon" href="/coin.png" />
         <link rel="apple-touch-icon" href="/coin.png" />
