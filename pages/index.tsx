@@ -37,7 +37,7 @@ const Home: NextPage<IProps> = (props: IProps) => {
           content="A website created by Nguyen Duy Thuan"
         />
         <meta name="og:site_name" content="NguyenDuyThuan" />
-        <meta name="og:url" content="https://www.nguyenduythuan.dev" />
+        <meta name="og:url" content={ogUrl} />
         <meta name="og:image" content={ogImage} />
         <meta name="og:image:width" content="720" />
         <meta name="og:image:height" content="480" />
@@ -47,7 +47,7 @@ const Home: NextPage<IProps> = (props: IProps) => {
         <meta property="og:image:width" content="720" />
         <meta property="og:image:height" content="480" />
         <meta property="og:rich_attachment" content="true" />
-        <meta property="og:url" content="https://www.nguyenduythuan.dev" />
+        <meta property="og:url" content={ogUrl} />
 
         <link rel="icon" href="/coin.png" />
         <link rel="apple-touch-icon" href="/coin.png" />
