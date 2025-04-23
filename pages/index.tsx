@@ -31,23 +31,37 @@ const Home: NextPage<IProps> = (props: IProps) => {
     >
       <Head>
         <title>Nguyen Duy Thuan</title>
+        <meta property="al:ios:url" content="https://uonearth.urbn8.io" />
+        <meta property="al:ios:app_store_id" content="6470965614" />
+        <meta property="al:ios:app_name" content="Uon.Earth" />
+
+
         <meta name="og:title" content="Nguyen Duy Thuan" />
+        <meta name="og:type" content="website" />
+        <meta property="og:title" content="Nguyen Duy Thuan" />
+        <meta property="og:type" content="website" />
+
         <meta
           name="description"
           content="A website created by Nguyen Duy Thuan"
         />
+        <meta
+          property="description"
+          content="A website created by Nguyen Duy Thuan"
+        />
         <meta name="og:site_name" content="NguyenDuyThuan" />
-        <meta name="og:url" content={ogUrl} />
+
         <meta name="og:image" content={ogImage} />
         <meta name="og:image:width" content="720" />
         <meta name="og:image:height" content="480" />
+        <meta name="og:url" content={ogUrl} />
         <meta name="og:rich_attachment" content="true" />
 
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="720" />
         <meta property="og:image:height" content="480" />
-        <meta property="og:rich_attachment" content="true" />
         <meta property="og:url" content={ogUrl} />
+        <meta property="og:rich_attachment" content="true" />
 
         <link rel="icon" href="/coin.png" />
         <link rel="apple-touch-icon" href="/coin.png" />
