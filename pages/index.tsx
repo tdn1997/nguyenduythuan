@@ -35,7 +35,7 @@ const Home: NextPage<IProps> = (props: IProps) => {
         <meta property="al:ios:app_store_id" content="6470965614" />
         <meta property="al:ios:app_name" content="Uon.Earth" />
 
-        <meta property="al:android:url" content="uon.earth://" />
+        <meta property="al:android:url" content="uonearth://" />
         <meta property="al:android:package" content="uon.earth" />
         <meta property="al:android:app_name" content="Uon.Earth" />
 
