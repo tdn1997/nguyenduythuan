@@ -31,9 +31,9 @@ const Home: NextPage<IProps> = (props: IProps) => {
     >
       <Head>
         <title>Nguyen Duy Thuan</title>
-        <meta property="al:ios:url" content="https://uonearth.urbn8.io/thuannguyen-c6ci?promoName=Thuan_Test_1_4_uon&channel=facebook" />
+        <meta property="al:ios:url" content="https://uonearth.urbn8.io" />
         <meta property="al:ios:app_store_id" content="6470965614" />
-        <meta property="al:ios:app_name" content="UonEarth_staging" />
+        <meta property="al:ios:app_name" content="UonEarth" />
 
         {/* <meta property="al:android:url" content="uonearth://" />
         <meta property="al:android:package" content="uon.earth" />
