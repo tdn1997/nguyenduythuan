@@ -15,6 +15,36 @@ const Home: NextPage<IProps> = (props: IProps) => {
   const taylor = "https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy8yODgwODM4ODM5OTQwMDY3MzI4L2xpbmtzLzEwMjI3OTQxODAyMzgyOTg3MjY0LzA0YzQ4ZjUyLWM0OTEtNDY0ZS04NTVjLTViMjc3MzI4ODUwZi1hYjY3NjE2ZDAwMDBiMjczZTc4N2NmZmVjMjBhYTJhMzk2YTYxNjQ3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19"
   const ogImage = !!props.query.promoName ? promotion : taylor;
   const ogUrl = `https://www.nguyenduythuan.dev${props.asPath}`
+  const img = {
+    "id": "12403409818694393856",
+    "awsKey": "/users/6903035450410995712/promotion_sharing/e2184518-7e60-4a7e-bbc2-2f5c06fc162a-f1350684-e96b-4316-b0af-4707c66d5363.png",
+    "awsBucket": "earthtoday-stage-images",
+    "url": "https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy82OTAzMDM1NDUwNDEwOTk1NzEyL3Byb21vdGlvbl9zaGFyaW5nL2UyMTg0NTE4LTdlNjAtNGE3ZS1iYmMyLTJmNWMwNmZjMTYyYS1mMTM1MDY4NC1lOTZiLTQzMTYtYjBhZi00NzA3YzY2ZDUzNjMucG5nIiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19",
+    "isTransparent": null
+  }
+  const urlKey = btoa(
+    JSON.stringify({
+      bucket: img.awsBucket,
+      key: img.awsKey,
+      outputFormat: "jpeg",
+      edits: {
+        rotate: null, // Prevent wrong orientation
+        extract: {
+          top: 24,
+          left: 24,
+          width: 605,
+          height: 605,
+        }, // should not be null
+        resize: {
+          width: 150,
+          height: 150,
+          fit: "cover"
+        },
+      },
+    }),
+  );
+
+  const appleTouchIcon = "https://stage-images.earthtoday.com/" + urlKey
 
   return (
     <div
@@ -68,12 +98,14 @@ const Home: NextPage<IProps> = (props: IProps) => {
         <meta property="og:rich_attachment" content="true" />
 
         <link rel="icon" href="/coin.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.ico" />
+        {/* <link rel="apple-touch-icon" href="/apple-touch-icon.ico" /> */}
+        <link rel="apple-touch-icon" href={appleTouchIcon} />
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Nguyễn Duy Thuận</h1>
 
         <p className={styles.description}>Javascript Developer</p>
+        {/* <img src={appleTouchIcon} /> */}
       </main>
 
       <footer className={styles.footer}>
