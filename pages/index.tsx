@@ -40,9 +40,9 @@ const Home: NextPage<IProps> = (props: IProps) => {
         <meta property="al:android:app_name" content="Uon.Earth" /> */}
 
 
-        <meta name="og:title" content="Nguyen Duy Thuan" />
+        <meta name="og:title" content="Nguyen Duy Thuan name=og:title" />
         <meta name="og:type" content="website" />
-        <meta property="og:title" content="Nguyen Duy Thuan" />
+        <meta property="og:title" content="Nguyen Duy Thuan property=og:title" />
         <meta property="og:type" content="website" />
 
         <meta
@@ -68,7 +68,7 @@ const Home: NextPage<IProps> = (props: IProps) => {
         <meta property="og:rich_attachment" content="true" />
 
         <link rel="icon" href="/coin.png" />
-        <link rel="apple-touch-icon" href="/coin.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.ico" />
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Nguyễn Duy Thuận</h1>
