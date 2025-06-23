@@ -70,9 +70,9 @@ const Home: NextPage<IProps> = (props: IProps) => {
         <meta property="al:android:app_name" content="Uon.Earth" /> */}
 
 
-        <meta name="og:title" content="Nguyen Duy Thuan name=og:title" />
+        <meta name="og:title" content="Join my campaign for Earth. Collect {collectionName} by {creator}. Together we protect the planet. Meter x meter." />
         <meta name="og:type" content="website" />
-        <meta property="og:title" content="Join my campaign for Earth. Collect {collectionName} by {creator}. Together we protect the planet. Meter x meter." />
+        <meta property="og:title" content="Nguyen Duy Thuan property=og:title" />
         <meta property="og:type" content="website" />
 
         <meta
@@ -99,8 +99,8 @@ const Home: NextPage<IProps> = (props: IProps) => {
 
         <link rel="icon" href="/coin.png" />
         {/* <link rel="apple-touch-icon" href="/apple-touch-icon.ico" /> */}
+        <link rel="apple-touch-icon" href={appleTouchIcon} />
       </Head>
-      <link rel="apple-touch-icon" href={appleTouchIcon} />
       <main className={styles.main}>
         <h1 className={styles.title}>Nguyễn Duy Thuận</h1>
 
