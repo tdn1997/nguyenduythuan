@@ -16,10 +16,10 @@ const Home: NextPage<IProps> = (props: IProps) => {
   const ogImage = !!props.query.promoName ? promotion : taylor;
   const ogUrl = `https://www.nguyenduythuan.dev${props.asPath}`
   const img = {
-    "id": "12403409818694393856",
-    "awsKey": "/users/6903035450410995712/promotion_sharing/e2184518-7e60-4a7e-bbc2-2f5c06fc162a-f1350684-e96b-4316-b0af-4707c66d5363.png",
+    "id": "11852132816669052928",
+    "awsKey": "/users/6302764515981008896/promotion_sharing/47c59010-cd9a-4b39-8ec3-6ee34c969cce-87f34072-173d-498d-b2c7-118e6bba8be0.png",
     "awsBucket": "earthtoday-stage-images",
-    "url": "https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy82OTAzMDM1NDUwNDEwOTk1NzEyL3Byb21vdGlvbl9zaGFyaW5nL2UyMTg0NTE4LTdlNjAtNGE3ZS1iYmMyLTJmNWMwNmZjMTYyYS1mMTM1MDY4NC1lOTZiLTQzMTYtYjBhZi00NzA3YzY2ZDUzNjMucG5nIiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19",
+    "url": "https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy82MzAyNzY0NTE1OTgxMDA4ODk2L3Byb21vdGlvbl9zaGFyaW5nLzQ3YzU5MDEwLWNkOWEtNGIzOS04ZWMzLTZlZTM0Yzk2OWNjZS04N2YzNDA3Mi0xNzNkLTQ5OGQtYjJjNy0xMThlNmJiYThiZTAucG5nIiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19",
     "isTransparent": null
   }
   const urlKey = btoa(
@@ -72,7 +72,7 @@ const Home: NextPage<IProps> = (props: IProps) => {
 
         <meta name="og:title" content="Nguyen Duy Thuan name=og:title" />
         <meta name="og:type" content="website" />
-        <meta property="og:title" content="Nguyen Duy Thuan property=og:title" />
+        <meta property="og:title" content="Join my campaign for Earth. Collect {collectionName} by {creator}. Together we protect the planet. Meter x meter." />
         <meta property="og:type" content="website" />
 
         <meta
@@ -99,8 +99,8 @@ const Home: NextPage<IProps> = (props: IProps) => {
 
         <link rel="icon" href="/coin.png" />
         {/* <link rel="apple-touch-icon" href="/apple-touch-icon.ico" /> */}
-        <link rel="apple-touch-icon" href={appleTouchIcon} />
       </Head>
+      <link rel="apple-touch-icon" href={appleTouchIcon} />
       <main className={styles.main}>
         <h1 className={styles.title}>Nguyễn Duy Thuận</h1>
 
