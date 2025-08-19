@@ -45,7 +45,8 @@ const Home: NextPage<IProps> = (props: IProps) => {
     }),
   );
 
-  const appleTouchIcon = "https://stage-images.earthtoday.com/" + urlKey
+  // const appleTouchIcon = "https://stage-images.earthtoday.com/" + urlKey
+  const appleTouchIcon = "" 
 
   return (
     <div
@@ -99,7 +100,6 @@ const Home: NextPage<IProps> = (props: IProps) => {
         <meta property="og:rich_attachment" content="true" />
 
         <link rel="icon" href="/coin.png" />
-        {/* <link rel="apple-touch-icon" href="/apple-touch-icon.ico" /> */}
         <link rel="apple-touch-icon" href={appleTouchIcon} />
       </Head>
       <main className={styles.main}>
