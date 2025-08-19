@@ -13,7 +13,8 @@ interface IProps {
 const Home: NextPage<IProps> = (props: IProps) => {
   const promotion = "https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy82MzAyNzY0NTE1OTgxMDA4ODk2L3Byb21vdGlvbl9zaGFyaW5nLzVkNjE3NjZiLWMwZTYtNGM3Yi1iNmFjLThkZjQ5ZDBjNzBiNS1lZDY4YjRhYi0wNzVkLTQ0NWItYjlkMS1lYTI1OTQxNzk4M2YucG5nIiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6NjI3LCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjowLCJnIjowLCJiIjowLCJhbHBoYSI6MH19fX0="
   const taylor = "https://stage-images.earthtoday.com/eyJidWNrZXQiOiJlYXJ0aHRvZGF5LXN0YWdlLWltYWdlcyIsImtleSI6Ii91c2Vycy8yODgwODM4ODM5OTQwMDY3MzI4L2xpbmtzLzEwMjI3OTQxODAyMzgyOTg3MjY0LzA0YzQ4ZjUyLWM0OTEtNDY0ZS04NTVjLTViMjc3MzI4ODUwZi1hYjY3NjE2ZDAwMDBiMjczZTc4N2NmZmVjMjBhYTJhMzk2YTYxNjQ3IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsiZml0IjoiY292ZXIifX19"
-  const ogImage = !!props.query.promoName ? promotion : taylor;
+  // const ogImage = !!props.query.promoName ? promotion : taylor;
+  const ogImage = ""
   const ogUrl = `https://www.nguyenduythuan.dev${props.asPath}`
   const img = {
     "id": "11852132816669052928",
