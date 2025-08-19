@@ -99,7 +99,7 @@ const Home: NextPage<IProps> = (props: IProps) => {
         <meta property="og:url" content={ogUrl} />
         <meta property="og:rich_attachment" content="true" />
 
-        <link rel="icon" href="/coin.png" />
+        <link rel="icon" href={appleTouchIcon} />
         <link rel="apple-touch-icon" href={appleTouchIcon} />
       </Head>
       <main className={styles.main}>
