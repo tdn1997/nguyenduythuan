@@ -1,0 +1,14 @@
+{
+  "name": "Nguyen Duy Thuan — Full Stack Engineer",
+  "short_name": "NDT",
+  "description": "Personal portfolio of Nguyen Duy Thuan, full stack engineer.",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#292929",
+  "background_color": "#292929",
+  "display": "standalone",
+  "start_url": "/"
+}
