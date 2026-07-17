@@ -1,5 +1,4 @@
 import "../styles/tailwind.css";
-import "../styles/defaults.css";
 import "../styles/globals.css";
 import "../styles/reset.css";
 

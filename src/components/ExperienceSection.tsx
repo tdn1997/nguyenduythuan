@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 const experiences = [
   {
     hash: "a1b2ca2",
@@ -57,13 +59,14 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
+      aria-labelledby="experience-heading"
       className="relative isolate overflow-hidden border-b border-[#ff5b2e]/20 bg-[#292929] py-20 text-[#e4e8ef] md:py-28"
     >
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(rgba(255,91,46,0.13)_1px,transparent_1px),linear-gradient(90deg,rgba(255,91,46,0.13)_1px,transparent_1px)] bg-[size:54px_54px] md:bg-[size:72px_72px]" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_26%_20%,rgba(255,91,46,0.12),transparent_30%),radial-gradient(circle_at_72%_58%,rgba(79,145,255,0.1),transparent_28%),linear-gradient(180deg,rgba(20,20,20,0.18),rgba(20,20,20,0.7))]" />
 
       <div className="container">
-        <header className="mb-14 flex items-center gap-4 font-mono md:mb-16">
+        <header className="reveal mb-14 flex items-center gap-4 font-mono md:mb-16" data-reveal>
           <span className="grid h-9 w-9 place-items-center text-[#ff5b2e]">
             <svg aria-hidden="true" viewBox="0 0 24 24" className="h-8 w-8" fill="none">
               <circle cx="6" cy="6" r="2.25" stroke="currentColor" strokeWidth="1.8" />
@@ -71,7 +74,7 @@ export default function ExperienceSection() {
               <path d="M8.25 6H12a4 4 0 0 1 4 4v5.75" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
           </span>
-          <h2 className="font-mono text-4xl font-black tracking-normal text-[#e8edf5] md:text-5xl">
+          <h2 id="experience-heading" className="font-mono text-4xl font-black tracking-normal text-[#e8edf5] md:text-5xl">
             # Experience.git
           </h2>
         </header>
@@ -90,7 +93,9 @@ export default function ExperienceSection() {
               return (
                 <article
                   key={experience.hash}
-                  className="relative grid gap-6 md:grid-cols-[minmax(0,1fr)_80px_minmax(0,1fr)] md:items-center"
+                  className="reveal relative grid gap-6 md:grid-cols-[minmax(0,1fr)_80px_minmax(0,1fr)] md:items-center"
+                  data-reveal
+                  style={{ "--reveal-delay": `${index * 120}ms` } as CSSProperties}
                 >
                   <div
                     className={`relative overflow-hidden rounded-lg border border-black/30 bg-[#18191b] shadow-[0_24px_65px_rgba(0,0,0,0.38)] ${cardClass}`}

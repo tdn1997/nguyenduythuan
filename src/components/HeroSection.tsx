@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 const loadedModules = ["REACT", "NEXT.JS", "NODE.JS", "TYPESCRIPT", "JAVA", "SPRING"];
 
 const codeLines = [
@@ -152,6 +154,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
+      aria-labelledby="hero-heading"
       className="relative isolate min-h-[calc(100vh-4rem)] overflow-hidden border-b border-[#ff5b2e]/20 bg-[#292929] py-16 text-[#e4e8ef] md:py-20 lg:py-0"
     >
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(rgba(255,91,46,0.13)_1px,transparent_1px),linear-gradient(90deg,rgba(255,91,46,0.13)_1px,transparent_1px)] bg-[size:68px_68px]" />
@@ -159,13 +162,13 @@ export default function HeroSection() {
       <div className="absolute left-0 top-0 -z-10 h-24 w-80 bg-[#ff5b2e]/10 blur-3xl" />
 
       <div className="container relative grid min-h-[calc(100vh-4rem)] items-center gap-12 py-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
-        <div className="relative z-10 max-w-3xl">
+        <div className="reveal relative z-10 max-w-3xl" data-reveal>
           <div className="inline-flex items-center gap-3 rounded-md border border-[#ff6a1f]/55 bg-[#301a10]/70 px-4 py-2 font-mono text-sm uppercase tracking-[0.12em] text-[#ff6a2a] shadow-[0_0_26px_rgba(255,91,46,0.18)]">
             <span className="h-3 w-3 rounded-full bg-[#ff5b2e] shadow-[0_0_16px_rgba(255,91,46,0.9)]" />
             SYSTEM.KERNEL :: v2.5.0 ONLINE
           </div>
 
-          <h1 className="mt-8 font-display text-[clamp(3rem,9vw,6.5rem)] font-bold leading-[0.95] tracking-normal text-[#e8edf5] md:mt-10">
+          <h1 id="hero-heading" className="mt-8 font-display text-[clamp(3rem,9vw,6.5rem)] font-bold leading-[0.95] tracking-normal text-[#e8edf5] md:mt-10">
             Hello, I&apos;m
             <span className="mt-2 block bg-gradient-to-r from-[#ff852c] via-[#d09a93] to-[#4f91ff] bg-clip-text text-transparent drop-shadow-[0_20px_18px_rgba(255,91,46,0.24)]">
               Nguyen Duy Thuan
@@ -226,7 +229,7 @@ export default function HeroSection() {
           <p className="mt-24 hidden font-mono text-sm text-[#1d7f3b]/45 md:block">while(alive) {"{ code() }"}</p>
         </div>
 
-        <div className="relative z-10 lg:pl-4">
+        <div className="reveal relative z-10 lg:pl-4" data-reveal style={{ "--reveal-delay": "140ms" } as CSSProperties}>
           <div className="overflow-hidden rounded-2xl border border-[#ff5b2e]/20 bg-[#0e0f11] shadow-[0_0_90px_rgba(255,91,46,0.16),0_30px_80px_rgba(0,0,0,0.45)]">
             <div className="flex h-14 items-center justify-between bg-[#3b3b39] px-6">
               <div className="flex items-center gap-3">

@@ -84,14 +84,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               />
               <span className="truncate">{project.language}</span>
             </span>
-            <span className="flex items-center gap-1.5">
-              <StarIcon />
-              {project.stars}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <ForkIcon />
-              {project.forks}
-            </span>
+            {typeof project.stars === "number" ? (
+              <span className="flex items-center gap-1.5">
+                <StarIcon />
+                {project.stars}
+              </span>
+            ) : null}
+            {typeof project.forks === "number" ? (
+              <span className="flex items-center gap-1.5">
+                <ForkIcon />
+                {project.forks}
+              </span>
+            ) : null}
           </div>
 
           {project.demoUrl ? (

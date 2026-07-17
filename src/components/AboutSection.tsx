@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 const profileRows = [
   { label: "OPERATOR", value: "NGUYEN DUY THUAN", accent: "text-[#ff5b2e]" },
   { label: "ROLE", value: "FULL_STACK_SOFTWARE_ENGINEER", accent: "text-[#4f91ff]" },
@@ -53,21 +55,22 @@ export default function AboutSection() {
   return (
     <section
       id="about"
+      aria-labelledby="about-heading"
       className="relative isolate overflow-hidden border-b border-[#ff5b2e]/20 bg-[#292929] py-20 text-[#e4e8ef] md:py-28"
     >
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(rgba(255,91,46,0.13)_1px,transparent_1px),linear-gradient(90deg,rgba(255,91,46,0.13)_1px,transparent_1px)] bg-[size:68px_68px]" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_48%,rgba(255,91,46,0.15),transparent_28%),radial-gradient(circle_at_70%_34%,rgba(79,145,255,0.16),transparent_30%),linear-gradient(180deg,rgba(20,20,20,0.18),rgba(20,20,20,0.74))]" />
 
       <div className="container">
-        <header className="mb-12 flex items-center gap-4 font-mono md:mb-16">
+        <header className="reveal mb-12 flex items-center gap-4 font-mono md:mb-16" data-reveal>
           <TerminalGlyph />
-          <h2 className="text-4xl font-bold tracking-normal text-[#e8edf5] md:text-5xl">
+          <h2 id="about-heading" className="text-4xl font-bold tracking-normal text-[#e8edf5] md:text-5xl">
             <span className="text-[#e8edf5]"># </span>About.system
           </h2>
         </header>
 
         <div className="grid items-start gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
-          <div className="relative overflow-hidden rounded-[22px] border border-[#ff5b2e]/45 bg-[#18191b]/95 px-7 py-10 shadow-[0_0_0_1px_rgba(79,145,255,0.14),0_0_54px_rgba(255,91,46,0.18),0_26px_70px_rgba(0,0,0,0.36)] md:px-10 md:py-14">
+          <div className="reveal relative overflow-hidden rounded-[22px] border border-[#ff5b2e]/45 bg-[#18191b]/95 px-7 py-10 shadow-[0_0_0_1px_rgba(79,145,255,0.14),0_0_54px_rgba(255,91,46,0.18),0_26px_70px_rgba(0,0,0,0.36)] md:px-10 md:py-14" data-reveal>
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#4f91ff]/70 to-transparent" />
             <div className="mx-auto mb-12 grid h-44 w-44 place-items-center rounded-full border border-[#704018] bg-[#101113] shadow-[0_0_0_10px_rgba(79,145,255,0.16),0_0_0_18px_rgba(255,91,46,0.16)] md:h-48 md:w-48">
               <div className="relative grid h-36 w-36 place-items-center rounded-full border border-[#4f91ff]/55 bg-[radial-gradient(circle_at_45%_35%,rgba(255,255,255,0.1),transparent_44%),#17181a] md:h-40 md:w-40">
@@ -99,7 +102,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div>
+          <div className="reveal" data-reveal style={{ "--reveal-delay": "140ms" } as CSSProperties}>
             <div className="overflow-hidden rounded-lg border border-black/30 bg-[#191a1c] shadow-[0_24px_60px_rgba(0,0,0,0.42)]">
               <div className="flex h-14 items-center border-b border-black/30 bg-[#2e2f31] px-6 font-mono text-sm text-[#8f96a3]">
                 <span className="mr-3 text-[#9aa3b3]">&gt;_</span>

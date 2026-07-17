@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { projects, repositories } from "../data/projects";
 import ProjectCard from "./ui/ProjectCard";
 
@@ -38,27 +39,30 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
+      aria-labelledby="projects-heading"
       className="relative isolate overflow-hidden border-y border-[#ff5b2e]/15 bg-[#292929] py-20 text-[#e4e8ef] md:py-28"
     >
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(rgba(255,91,46,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(255,91,46,0.12)_1px,transparent_1px)] bg-[size:52px_52px] md:bg-[size:68px_68px]" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(20,20,20,0.12),rgba(20,20,20,0.56))]" />
 
       <div className="container">
-        <header className="mb-14 flex items-center gap-4 font-mono">
+        <header className="reveal mb-14 flex items-center gap-4 font-mono" data-reveal>
           <FolderIcon />
-          <h2 className="text-3xl font-black tracking-normal text-[#e8edf5] sm:text-4xl md:text-5xl">
+          <h2 id="projects-heading" className="text-3xl font-black tracking-normal text-[#e8edf5] sm:text-4xl md:text-5xl">
             <span className="text-[#e8edf5]">$ </span>ls -la ~/projects
           </h2>
         </header>
 
         <div className="grid gap-8 lg:grid-cols-[minmax(280px,0.92fr)_minmax(0,1.88fr)]">
-          <aside className="overflow-hidden rounded-lg border border-black/30 bg-[#18191b] shadow-[0_24px_60px_rgba(0,0,0,0.34)] lg:sticky lg:top-24 lg:max-h-[745px]">
+          <aside className="reveal overflow-hidden rounded-lg border border-black/30 bg-[#18191b] shadow-[0_24px_60px_rgba(0,0,0,0.34)] lg:sticky lg:top-24 lg:max-h-[745px]" data-reveal>
             <div className="flex items-center justify-between border-b border-black/30 bg-[#222325] px-6 py-4">
               <div className="flex items-center gap-3 text-lg font-bold text-[#c8ccd4]">
                 <RepoListIcon />
                 Repositories
               </div>
-              <span className="rounded-full bg-white/5 px-3 py-1 text-sm font-semibold text-[#747c89]">21</span>
+              <span className="rounded-full bg-white/5 px-3 py-1 text-sm font-semibold text-[#747c89]">
+                {repositories.length}
+              </span>
             </div>
 
             <div className="max-h-[560px] overflow-y-auto">
@@ -89,7 +93,7 @@ export default function ProjectsSection() {
             </div>
           </aside>
 
-          <div>
+          <div className="reveal" data-reveal style={{ "--reveal-delay": "120ms" } as CSSProperties}>
             <div className="mb-6 flex items-center gap-5">
               <h3 className="shrink-0 font-mono text-lg font-bold uppercase tracking-[0.16em] text-[#9aa3b3]">
                 Pinned Projects

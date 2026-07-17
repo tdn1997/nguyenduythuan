@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { FormEvent, useState } from "react";
 
 interface ContactResponse {
@@ -160,19 +161,20 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
+      aria-labelledby="contact-heading"
       className="relative isolate overflow-hidden bg-[#292929] py-20 text-[#dfe4ec] md:py-28"
     >
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(rgba(255,91,46,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(255,91,46,0.12)_1px,transparent_1px)] bg-[size:58px_58px]" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_52%_34%,rgba(255,91,46,0.11),transparent_24%),linear-gradient(180deg,rgba(41,41,41,0.1),rgba(22,22,24,0.48))]" />
 
       <div className="container">
-        <header className="mb-12 flex items-center gap-4 font-display text-3xl font-bold tracking-normal text-[#e7ebf2] md:text-5xl">
+        <header className="reveal mb-12 flex items-center gap-4 font-display text-3xl font-bold tracking-normal text-[#e7ebf2] md:text-5xl" data-reveal>
           <MailIcon className="h-7 w-7 shrink-0 text-[#ff5b2e]" />
-          <span className="font-mono text-[#e7ebf2]">$ ./contact.exe</span>
+          <h2 id="contact-heading" className="font-mono text-[#e7ebf2]">$ ./contact.exe</h2>
         </header>
 
         <div className="grid items-start gap-8 lg:grid-cols-[1fr_1fr] xl:gap-14">
-          <aside className="overflow-hidden rounded-lg bg-[#171719] shadow-[0_28px_80px_rgba(0,0,0,0.32)]">
+          <aside className="reveal overflow-hidden rounded-lg bg-[#171719] shadow-[0_28px_80px_rgba(0,0,0,0.32)]" data-reveal>
             <div className="flex h-12 items-center justify-between bg-[#242426] px-5">
               <div className="flex items-center gap-2.5">
                 <span className="h-3.5 w-3.5 rounded-full bg-[#f04045]" />
@@ -197,7 +199,7 @@ export default function ContactSection() {
             </div>
           </aside>
 
-          <div className="overflow-hidden rounded-lg bg-[#1b1b1d] shadow-[0_28px_80px_rgba(0,0,0,0.35)]">
+          <div className="reveal overflow-hidden rounded-lg bg-[#1b1b1d] shadow-[0_28px_80px_rgba(0,0,0,0.35)]" data-reveal style={{ "--reveal-delay": "140ms" } as CSSProperties}>
             <div className="flex h-12 items-center gap-4 bg-[#242426] px-5 font-mono text-sm">
               <span className="font-bold text-[#4f91ff]">TS</span>
               <span className="text-[#c9ced8]">sendMessage.ts</span>
@@ -296,7 +298,9 @@ export default function ContactSection() {
                   {isSubmitting ? "Sending..." : "Send message"}
                 </button>
 
-                {status ? <p className="font-mono text-sm text-[#41e48a]">{status}</p> : null}
+                <p role="status" aria-live="polite" className="font-mono text-sm text-[#41e48a]">
+                  {status}
+                </p>
               </div>
             </form>
           </div>

@@ -9,14 +9,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        neon: {
-          bg: "#0a0a0f",
-          panel: "#12121a",
-          text: "#e6e6f0",
+        brand: {
+          bg: "#292929",
+          panel: "#18191b",
+          panelAlt: "#171719",
+          accent: "#ff5b2e",
+          accentSoft: "#ff6a1f",
+          accentWarm: "#ff8b2a",
+          blue: "#4f91ff",
+          green: "#00e676",
+          yellow: "#ffd21f",
+          text: "#e8edf5",
           muted: "#9ca3af",
-          green: "#00ff88",
-          pink: "#ff0055",
-          cyan: "#22d3ee",
         },
       },
       fontFamily: {
@@ -24,12 +28,12 @@ module.exports = {
         body: ["Inter", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        neon: "0 0 0 1px rgba(0,255,136,0.25), 0 0 24px rgba(0,255,136,0.2)",
-        pink: "0 0 0 1px rgba(255,0,85,0.25), 0 0 24px rgba(255,0,85,0.2)",
+        brand: "0 0 0 1px rgba(255,91,46,0.28), 0 0 24px rgba(255,91,46,0.22)",
+        blue: "0 0 0 1px rgba(79,145,255,0.28), 0 0 24px rgba(79,145,255,0.2)",
       },
       backgroundImage: {
         "hero-glow":
-          "radial-gradient(circle at 20% 20%, rgba(34,211,238,.22), transparent 42%), radial-gradient(circle at 80% 10%, rgba(255,0,85,.16), transparent 35%), radial-gradient(circle at 50% 100%, rgba(0,255,136,.18), transparent 40%)",
+          "radial-gradient(circle at 66% 34%, rgba(93,83,255,.18), transparent 26%), radial-gradient(circle at 25% 45%, rgba(255,91,46,.16), transparent 28%), radial-gradient(circle at 50% 100%, rgba(255,91,46,.18), transparent 40%)",
       },
     },
   },
