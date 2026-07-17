@@ -4,3 +4,6 @@ dist
 plans
 .next
 tsconfig.tsbuildinfo
+
+# Private career profile — contains proprietary detail; keep out of the repo
+PROFILE.md
