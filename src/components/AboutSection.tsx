@@ -7,8 +7,8 @@ const profileRows = [
 ];
 
 const statCards = [
-  { label: "EXPERIENCE", value: "ACTIVE", suffix: "DEV", tone: "text-[#ff5b2e]", icon: "terminal" },
-  { label: "PROJECTS", value: "3", suffix: "LIVE", tone: "text-[#4f91ff]", icon: "code" },
+  { label: "EXPERIENCE", value: "6+", suffix: "YEARS", tone: "text-[#ff5b2e]", icon: "terminal" },
+  { label: "PROJECTS", value: "4", suffix: "LIVE", tone: "text-[#4f91ff]", icon: "code" },
   { label: "STATUS", value: "OPEN", suffix: "NOW", tone: "text-[#00e676]", icon: "coffee" },
 ];
 
