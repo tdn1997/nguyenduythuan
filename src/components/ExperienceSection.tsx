@@ -2,25 +2,28 @@ import type { CSSProperties } from "react";
 
 const experiences = [
   {
-    hash: "a1b2ca2",
-    branch: "HEAD -> engineer",
-    company: "EboSoft Solutions",
+    hash: "c0ffee1",
+    branch: "HEAD -> full-stack",
+    company: "Urbn8",
     title: "Full Stack Engineer",
-    date: "2024-05 - Present",
+    date: "2019-08 - Present",
     description:
-      "Leading end-to-end development of scalable web applications and POS systems using React, Next.js, NestJS, and Spring Boot. Architecting cloud infrastructure on AWS with Docker, ensuring performance and reliability across both enterprise and retail-facing products.",
-    tags: ["React", "Next.js", "TypeScript", "NestJS", "Spring Boot", "MongoDB", "AWS", "Docker", "Git", "Jira", "Figma"],
-    stats: { files: 11, additions: 100, deletions: 10 },
-  },
-  {
-    hash: "a1b2ca1",
-    branch: "HEAD -> developer",
-    company: "Freelance - Upwork/Fiverr",
-    title: "Full Stack Developer",
-    date: "2022-06 - 2024-05",
-    description: "Developed and maintained web applications",
-    tags: ["JavaScript", "Express", "PostgreSQL", "React"],
-    stats: { files: 4, additions: 120, deletions: 15 },
+      "Building and scaling web and mobile products end to end. Progressed from frontend into full-stack ownership: React / Next.js / MobX frontends shipped to iOS & Android via Capacitor, and NestJS / TypeScript backends spanning Stripe payments, event-sourced services, distributed caching, and serverless automation.",
+    tags: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "MobX",
+      "Capacitor",
+      "NestJS",
+      "Node.js",
+      "Stripe",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+      "Docker",
+    ],
+    stats: { files: 12, additions: 6, deletions: 0 },
   },
 ];
 
